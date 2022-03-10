@@ -26,7 +26,7 @@
             </li>
 
             <li style="padding-right:3px;">
-              <router-link    to="/products" class="nav-link text-white">
+              <router-link    to="/students" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
                 Students
               </router-link>
@@ -84,15 +84,11 @@
 
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>
-
         <div class="text-end">
          <div class="text-end">
-             <router-link to="/become-a-tutor">  <button type="button" class="btn btn-success text-white me-2"> Become a tutor </button> </router-link>
+             <router-link to="/become-a-tutor">  <button type="button" class="btn btn-success text-white me-2"><small> Become a tutor</small> </button> </router-link>
          <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
-         <router-link to="/sign-up"> <button type="button" class="btn btn-warning">Sign-up</button> </router-link>
+         <router-link to="/get-a-tutor"> <button type="button" class="btn btn-warning"><small>Get a tutor</small> </button> </router-link>
         </div>
         </div>
       </div>

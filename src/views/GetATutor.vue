@@ -1,11 +1,11 @@
 <template>
-  <form @submit.prevent="register" class="form neu-border">
+  <form @submit.prevent="GetATutor" class="form neu-border">
     <h2 class="form-heading">Register</h2>
     <input
       class="form-input neu-border-inset"
       type="text"
-      v-model="username"
-      placeholder="Username"
+      v-model="fullname"
+      placeholder="Full name"
       required
     />
     <input
@@ -31,6 +31,20 @@
       placeholder="Contact Number"
       required
     />
+    <input
+      class="form-input neu-border-inset"
+      type="text"
+      v-model="grade"
+      placeholder="Grade"
+      required
+    />
+     <input
+      class="form-input neu-border-inset"
+      type="text"
+      v-model="location"
+      placeholder="Location"
+      required
+    />
     
     <button type="submit" class="form-btn neu-border">Sign up</button>
     <!-- <div class="form-social-login">
@@ -52,15 +66,19 @@
 export default {
   data() {
     return {
-      username: "",
+      fullname: "",
       email: "",
       contact: "",
       password: "",
+      grade: "",
+      location: ""
+
+
     };
   },
   methods: {
     register() {
-      console.log(this.username, this.email, this.contact, this.password);
+      console.log(this.fullname, this.email, this.contact, this.password, this.grade, this.location);
       fetch("https://arden-first-backend.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify({
@@ -75,9 +93,9 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          alert("User registered");
+          alert("Student registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "users" });
+          this.$router.push({ name: "tutors" });
         })
         .catch((err) => {
           alert(err);
