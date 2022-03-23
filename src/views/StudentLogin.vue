@@ -1,17 +1,20 @@
 <template>
-  <form @submit.prevent="login" class="form new-border">
-    <h2 class="form-heading">Login</h2>
+
+  <form @submit.prevent="loginStudent" class="form new-border">
+    <h2 class="form-heading">Student Login</h2>
     <input
       class="form-input new-border-inset"
       type="username"
       v-model="username"
       placeholder="username"
+      required
     />
     <input
       class="form-input new-border-inset"
       type="password"
       v-model="password"
       placeholder="Password"
+      required
     />
     <button type="submit" class="form-btn neu-border">Sign in</button>
     <!-- <div class="form-social-login">
@@ -25,7 +28,7 @@
 
     <p>
       Not a member?
-      <router-link :to="{ name: 'SignUp' }">Create an account</router-link>
+      <router-link :to="{ name: 'RegisterStudent' }">Create an account</router-link>
     </p>
   </form>
 </template>
@@ -40,15 +43,19 @@ export default {
     };
   },
   methods: {
-    login() {
+    logout() {console.log("You are logged out")
+    localStorage.clear();
+    alert("Logged out")},
+    loginStudent() {
             console.log(this.username, this.password);
 
-      fetch("https://arden-first-backend.herokuapp.com/users", {
-        method: "PATCH",
+      fetch("http://thuto-backend.herokuapp.com/auth2/login-student", {
+        method: "POST",
         body: JSON.stringify({
           username: this.username,
           password: this.password,
         }),
+        mode: 'cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
@@ -56,8 +63,8 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           localStorage.setItem("jwt", json.jwt);
-          alert("User logged in");
-          this.$router.push({ name: "users" });
+          alert("Student logged in");
+          this.$router.push({ name: "Tutors" });
         })
         .catch((err) => {
           alert(err);

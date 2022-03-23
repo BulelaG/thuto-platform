@@ -1,6 +1,7 @@
 <template>
-  <form @submit.prevent="GetATutor" class="form neu-border">
-    <h2 class="form-heading">Register</h2>
+  <form @submit.prevent="register" class="form neu-border">
+    <h2 class="form-heading">Student Registration </h2>
+
     <input
       class="form-input neu-border-inset"
       type="text"
@@ -8,6 +9,15 @@
       placeholder="Full name"
       required
     />
+
+   <input
+      class="form-input neu-border-inset"
+      type="text"
+      v-model="username"
+      placeholder="username"
+      required
+    />  
+
     <input
       class="form-input neu-border-inset"
       type="email"
@@ -23,27 +33,37 @@
       placeholder="Password"
       required
     />
-
-    <input
+     <input
       class="form-input neu-border-inset"
       type="text"
-      v-model="contact"
-      placeholder="Contact Number"
-      required
+      v-model="subject"
+      placeholder="Subject"
     />
     <input
       class="form-input neu-border-inset"
       type="text"
       v-model="grade"
       placeholder="Grade"
-      required
     />
+    <input
+      class="form-input new-border-inset"
+      type="text"
+      v-model="img"
+      placeholder="Image url"
+      
+    />
+    <input
+      class="form-input neu-border-inset"
+      type="text"
+      v-model="contact"
+      placeholder="Contact Number"
+    />
+    
      <input
       class="form-input neu-border-inset"
       type="text"
       v-model="location"
       placeholder="Location"
-      required
     />
     
     <button type="submit" class="form-btn neu-border">Sign up</button>
@@ -58,7 +78,7 @@
 
     <p>
       Already a member?
-      <router-link :to="{ name: 'Login' }">Sign in</router-link>
+      <router-link :to="{ name: 'Tutors' }">Sign in</router-link>
     </p>
   </form>
 </template>
@@ -67,7 +87,10 @@ export default {
   data() {
     return {
       fullname: "",
+      username: "",
+      img: "",
       email: "",
+      subject: "",
       contact: "",
       password: "",
       grade: "",
@@ -76,17 +99,24 @@ export default {
 
     };
   },
+  
   methods: {
     register() {
-      console.log(this.fullname, this.email, this.contact, this.password, this.grade, this.location);
-      fetch("https://arden-first-backend.herokuapp.com/users", {
+      console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grade, this.location);
+      fetch("http://thuto-backend.herokuapp.com/auth2/register-student", {
         method: "POST",
         body: JSON.stringify({
           username: this.username,
+          fullname: this.fullname,
           email: this.email,
+          img: this.img,
+          subject: this.subject,
+          grade: this.grade,  
+          location: this.location,
           contact: this.contact,
-          password: this.password,
+          password: this.password
         }),
+        mode: 'cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },

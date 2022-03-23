@@ -86,9 +86,16 @@
 
         <div class="text-end">
          <div class="text-end">
-             <router-link to="/become-a-tutor">  <button type="button" class="btn btn-success text-white me-2"><small> Become a tutor</small> </button> </router-link>
-         <router-link to="/login">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
-         <router-link to="/get-a-tutor"> <button type="button" class="btn btn-warning"><small>Get a tutor</small> </button> </router-link>
+             <router-link to="/register-tutor">  <button type="button" class="btn btn-success text-white me-2"><small> Become a tutor</small> </button> </router-link>
+         <router-link to="/login-student">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
+          <button
+          type="submit"
+          id="logout"
+           @click="logout" 
+           class="btn btn-light text-dark me-2"> <small>Logout</small> 
+           </button> 
+
+         <router-link to="/register-student"> <button type="button" class="btn btn-warning"><small>Get a tutor</small> </button> </router-link>
         </div>
         </div>
       </div>

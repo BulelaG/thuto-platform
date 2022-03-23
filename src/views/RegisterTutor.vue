@@ -3,7 +3,7 @@
 <!-- CODE for hiding this if not -->
 
 
-  <form @submit.prevent="BecomeATutor" class="form new-border">
+  <form action="/action_page.php"  @submit.prevent="registerTutor" class="form new-border">
     <h2 class="form-heading">Become a tutor</h2>
 
    <input
@@ -13,13 +13,43 @@
       placeholder="Full name"
       required
     />
+    <input
+      class="form-input new-border-inset"
+      type="text"
+      v-model="username"
+      placeholder="Username"
+      required
+    /> 
+      <input
+      class="form-input new-border-inset"
+      type="Password"
+      v-model="password"
+      placeholder="password"
+      required
+    /> 
 
      <input
       class="form-input new-border-inset"
+      type="email"
+      v-model="email"
+      placeholder="Email"
+      
+    />
+
+
+    <input
+      class="form-input new-border-inset"
+      type="grades"
+      v-model="grades"
+      placeholder="Grades"
+    />
+
+  <input
+      class="form-input new-border-inset"
       type="text"
-      v-model="subject"
-      placeholder="Subject"
-      required
+      v-model="contact"
+      placeholder="Contact number"
+      
     />
 
      <input
@@ -27,26 +57,46 @@
       type="text"
       v-model="location"
       placeholder="Location"
-      required
+      
     />
 
-    <input
+  
+     <input
       class="form-input new-border-inset"
       type="text"
-      v-model="img"
-      placeholder="Image url"
-      required
+      v-model="subject"
+      placeholder="Subject"
+      
     />
-  
-    <input
+
+     <input
       class="form-input new-border-inset"
-      type="grades"
-      v-model="grades"
-      placeholder="Grades"
+      type="img"
+      v-model="img"
+      placeholder="img url"
+    />
+
+<!-- 
+
+        <p class="">Required Document</p>
+    <input
+     
+      class="form-input new-border-inset"
+      placeholder="Document"
+       type="file"
       required
     />
-   
-    <button type="submit" class="form-btn new-border">Become a tutor</button>
+    <p class="">Profile Image</p>
+ <input type="file" id="myFile" name="filename">
+    <input
+     
+      class="form-input new-border-inset"
+      placeholder="Image url"
+       type="file"
+      required
+    />
+   -->
+    <button to="/" type="submit" class="text-success   form-btn new-border">Become a tutor</button>
     <!-- <div class="form-social-login">
       <button class="form-btn new-border form-social-btn">
         <i class="fab fa-google"></i>
@@ -64,47 +114,50 @@
 </template>
 <script>
 export default {
-// POST products HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// POST TUTORS HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
   data() {
     return {
       fullname: "",
-      subject: "",
-      location: "",
-      grades: "",
+      username: "",
       img: "",
-      
+      email: "",
+      subject: "",
+      contact: "",
+      password: "",
+      grade: "",
+      location: ""
+
+
     };
   },
+  
   methods: {
-    addProduct() {
-
-       console.log(this.fullname, this.subject, this.location, this.grades, this.img);
-
-      if (!localStorage.getItem("jwt")) {
-        alert("User not logged in");
-        return this.$router.push({ name: "Login" });
-      }
-      fetch("https://arden-first-backend.herokuapp.com/products", {
+    registerTutor() {
+      console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grade, this.location);
+      fetch("http://thuto-backend.herokuapp.com/auth/register-tutor", {
         method: "POST",
         body: JSON.stringify({
+          username: this.username,
           fullname: this.fullname,
-          subject: this.subject,
-          location: this.location,
+          email: this.email,
           img: this.img,
-          grades: this.grades
-
+          subject: this.subject,
+          grade: this.grade,  
+          location: this.location,
+          contact: this.contact,
+          password: this.password
         }),
+        mode: 'cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-
         },
       })
         .then((response) => response.json())
         .then((json) => {
-          alert("Tutor registered successfully");
+          alert("Tutor application sent");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "Profile" });
+          this.$router.push({ name: "Home" });
         })
         .catch((err) => {
           alert(err);
@@ -128,7 +181,7 @@ export default {
   
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 40px;
   gap: 20px;
   width: 100%;

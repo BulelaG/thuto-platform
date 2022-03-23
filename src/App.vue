@@ -2,18 +2,24 @@
   <div id="app">
     <div id="nav">
       <Navigation/>
+
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
     <router-view :key="$route.fullPath" />
+      <Footer/>
   </div>
+ 
 </template>
 
 <script>
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
 export default {
   components:{
-    Navigation
+    Navigation,
+    Footer
   }
   
 }
