@@ -26,9 +26,9 @@
             </li>
 
             <li style="padding-right:3px;">
-              <router-link    to="/students" class="nav-link text-white">
+              <router-link    to="/faqs" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
-                Students
+                FAQs
               </router-link>
             </li>
 

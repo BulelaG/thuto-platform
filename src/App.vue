@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style>
+footer{
+  position: absolute;
+}
 html{
    background:rgb(230, 230, 230);
  

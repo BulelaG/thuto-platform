@@ -85,7 +85,7 @@ export default {
         grades:"10-12",
         subject: "Maths",
         location: "Mitchells Plain",
-        availability: "Weekdays(9am - 3pm)"
+        availability: "W/days(9am - 3pm)"
 
       }, {
        _id: "3",
@@ -94,7 +94,7 @@ export default {
         grades:"10-12",
         subject: "Physical Sciences",
         location: "Cape Town CBD",
-        availability: "Weekdays Online -(9am - 8pm)"
+        availability: "W/days Online -(9am - 8pm)"
 
 
       }, {
@@ -113,7 +113,7 @@ export default {
         grades:"10-12",
         subject: "Life Sciences",
         location: "Manenberg",
-        availability: "Weekend Online -(12pm - 8pm)"
+        availability: "Weekend Online(12pm-8pm)"
 
 
       }, {
