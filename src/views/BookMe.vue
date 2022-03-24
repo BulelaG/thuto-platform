@@ -2,12 +2,7 @@
   <div class="bookme">
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <section class="mb-4">
 
 
@@ -35,7 +30,7 @@
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control" required>
+                          <input type="text" placeholder="John Doe" id="name" name="name" class="form-control" required>
                           <label for="name" class="">Your name</label>
                       </div>
                   </div>
@@ -44,7 +39,7 @@
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
-                          <input type="email" id="email" name="email" class="form-control" required>
+                          <input type="email" placeholder="johndoe@gmail.com" id="email" name="email" class="form-control" required>
                           <label for="email" class="">Your email</label>
                       </div>
                   </div>
@@ -57,27 +52,50 @@
               <div style=" height:110px;" class="row">
                   <div class="col-md-12">
                       <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control" required>
+                          <input type="text" placeholder=" e.g Mathematics" id="subject" name="subject" class="form-control" required>
                           <label for="subject" class="">Subject</label>
                       </div>
                   </div>
               </div>
+             <!--Grid row-->
+              <div style=" height:110px;" class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input placeholder="Saturday(9am-12pm)" type="text" id="subject" name="class type" class="form-control" required>
+                          <label for="subject" class="">Class schedule</label>
+                      </div>
+                  </div>
+              </div>
+              
               <!--Grid row-->
-
+              <div style=" height:110px;" class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input placeholder="Online/In-person" type="text" id="subject" name="class type" class="form-control" required>
+                          <label for="subject" class="">Class type</label>
+                      </div>
+                  </div>
+              </div>
+              
+              <!--Grid row-->
+<div style=" height:110px;" class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input placeholder="Grade 10/11/12" type="text" id="subject" name="class type" class="form-control" required>
+                          <label for="subject" class="">Grade</label>
+                      </div>
+                  </div>
+              </div>
+              
               <!--Grid row-->
               <div style=" height:110px;" class="row">
 
-                  
                   <!--Grid column-->
                   <div class="col-md-12">
 
                       <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
-                          <label placeholder="" for="message">Your message</label>
-                           <textarea type="text" id="message" name="message" rows="1" class="form-control md-textarea" required></textarea>
-                          <label placeholder="" for="message">Your message</label>
-                           <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
-                          <label placeholder="" for="message">Your message</label>
+                          <textarea type="text" id="message" name="message" rows="1" class="form-control md-textarea" required></textarea>
+                          <label for="message">Message</label>
                       </div>
 
                   </div>
@@ -97,7 +115,7 @@
       <div style="border:solid  1px; padding-top:10px ;;  border-radius: 20px;" class="col-md-3 text-center">
           <ul class="list-unstyled mb-0">
               <li>  <div>
-                <p> CAMPUS ADDRESS </p>
+                <p> MY CLASSES ADDRESS </p>
                   </div>
                 <div>
             <iframe style="float: bottom; border-radius: 15%; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.2934215261566!2d18.490473614807716!3d-33.9849962806242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc433bfcf832a1%3A0x3b4439b8cc517802!2s314%20Imam%20Haron%20Rd%2C%20Lansdowne%2C%20Cape%20Town%2C%207780!5e0!3m2!1sen!2sza!4v1633096149800!5m2!1sen!2sza" width="200" height="120"  allowfullscreen="" loading="lazy"></iframe>
@@ -133,28 +151,27 @@
 
 </section>
   </div>
-  <!-- <br> -->
-    <!-- <br>
+  <!-- <br>
+    <br>
       <br>
         <br>
           <br>
             <br>
-              <br>
-                 -->
+              <br> -->
+                
                     
 </template>
 
 <script>
 
 export default {
-    name: 'Contact',
-    components: {Navigation,Footer}
+    
   }
 
 </script>
 <style scoped>
 
-.contact{
+.bookme{
 
 padding-left: 200px;
 padding-right: 200px;
@@ -163,7 +180,7 @@ padding-right: 200px;
 @media only screen and (max-width: 1380px){
 
 
-.contact{
+.bookme{
 
 padding-left: 55px;
 padding-right: 55px;
@@ -173,7 +190,7 @@ padding-right: 55px;
 @media only screen and (max-width: 780px){
 
 
-.contact{
+.bookme{
 
 padding-left: 55px;
 padding-right: 55px;
@@ -184,8 +201,7 @@ padding-right: 55px;
 @media only screen and (max-width: 480px){
 
   
-
-.contact{
+.bookme{
 
 padding-left: 35px;
 padding-right: 35px;
