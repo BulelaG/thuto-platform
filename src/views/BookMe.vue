@@ -67,12 +67,17 @@
               <!--Grid row-->
               <div style=" height:110px;" class="row">
 
+                  
                   <!--Grid column-->
                   <div class="col-md-12">
 
                       <div class="md-form">
                           <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
-                          <label for="message">Your message</label>
+                          <label placeholder="" for="message">Your message</label>
+                           <textarea type="text" id="message" name="message" rows="1" class="form-control md-textarea" required></textarea>
+                          <label placeholder="" for="message">Your message</label>
+                           <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                          <label placeholder="" for="message">Your message</label>
                       </div>
 
                   </div>
@@ -128,14 +133,14 @@
 
 </section>
   </div>
-  <br>
-    <br>
+  <!-- <br> -->
+    <!-- <br>
       <br>
         <br>
           <br>
             <br>
               <br>
-                
+                 -->
                     
 </template>
 
