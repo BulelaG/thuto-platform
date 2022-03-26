@@ -45,6 +45,7 @@ export default {
       username: "",
       password: "",
     };
+
   },
   methods: {
     logout() {console.log("You are logged out")
@@ -59,19 +60,22 @@ export default {
           username: this.username,
           password: this.password,
         }),
-        mode: 'cors',
+        // mode: 'no-cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
         .then((response) => response.json())
-        .then((json) => {
-          localStorage.setItem("jwt", json.jwt);
-          alert("Tutor logged in");
-          console.log(json)
-          if(json.jwt) this.$router.push({ name: "Home" });
-          console.log("non existent")
-          
+        .then(async(json) => {
+          if(json.accessToken){
+            console.log(json.accessToken)
+            alert("Tutor logged in");
+             this.$router.push({ name: "Tutors" });
+            return await localStorage.setItem("jwt", json.accessToken);
+          }
+          console.log(json);
+          alert("Wrong Credentials")
+           this.$router.push({ name: "Home" });
         })
         .catch((err) => {
           alert(err);

@@ -24,7 +24,7 @@
             class="col-lg-4 mb-4"
           >
             <div class="card">
-              <img :src="tutor.img" alt="" class="card-img-top" />
+              <img src="https://i.postimg.cc/2SSFM2nG/avatar.png" alt="" class="card-img-top" />
               <div class="card-body">
                 <br />
                 <h5 class="card-title text-primary">{{ tutor.fullname }}</h5>
@@ -79,6 +79,11 @@ export default {
 // GETTING SERVICES
 
   mounted() {
+ if (!localStorage.getItem("jwt")) {
+            alert("User not logged in");
+            return this.$router.push({ name: "Login" });
+        }
+
     fetch("http://thuto-backend.herokuapp.com/tutors")
       .then((res) => res.json())
       .then((data) => {
