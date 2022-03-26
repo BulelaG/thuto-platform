@@ -125,7 +125,7 @@ export default {
         .then((json) => {
           alert("Student registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "tutors" });
+          this.$router.push({ name: "Tutors" });
         })
         .catch((err) => {
           alert(err);

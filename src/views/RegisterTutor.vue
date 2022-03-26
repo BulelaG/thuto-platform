@@ -76,6 +76,13 @@
       placeholder="img url"
     />
 
+      <input
+      class="form-input new-border-inset"
+      type="document"
+      v-model="document"
+      placeholder="document"
+    />
+
 <!-- 
 
         <p class="">Required Document</p>
@@ -125,8 +132,10 @@ export default {
       subject: "",
       contact: "",
       password: "",
-      grade: "",
-      location: ""
+      grades: "",
+      location: "",
+      document: ""
+
 
 
     };
@@ -134,7 +143,21 @@ export default {
   
   methods: {
     registerTutor() {
-      console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grade, this.location);
+      const dta = [{
+          username: this.username,
+          fullname: this.fullname,
+          email: this.email,
+          img: this.img,
+          subject: this.subject,
+          grades: this.grades,  
+          location: this.location,
+          contact: this.contact,
+          password: this.password,
+          document: this.document
+
+        }]
+        console.table(dta)
+      // console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grades, this.location, this.document);
       fetch("http://thuto-backend.herokuapp.com/auth/register-tutor", {
         method: "POST",
         body: JSON.stringify({
@@ -143,19 +166,21 @@ export default {
           email: this.email,
           img: this.img,
           subject: this.subject,
-          grade: this.grade,  
+          grades: this.grades,  
           location: this.location,
           contact: this.contact,
-          password: this.password
+          password: this.password,
+          document: this.document
+
         }),
-        mode: 'cors',
+        // mode: 'no-cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
         .then((response) => response.json())
         .then((json) => {
-          alert("Tutor application sent");
+          alert("Tutor application successfully sent");
           localStorage.setItem("jwt", json.jwt);
           this.$router.push({ name: "Home" });
         })

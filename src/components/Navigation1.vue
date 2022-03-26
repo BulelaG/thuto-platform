@@ -33,7 +33,7 @@
             </li>
 
             <li style="padding-right:3px;">
-              <router-link id="mylinks" @submit.prevent="getTutors"  to="/tutors" class="nav-link text-white">
+              <router-link id="mylinks"  to="/tutors" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
                Tutors
               </router-link>
@@ -88,19 +88,6 @@
          <div class="text-end">
              <router-link to="/register-tutor">  <button type="button" class="btn btn-success text-white me-2"><small> Become a tutor</small> </button> </router-link>
          <router-link to="/login-student">  <button type="button" class="btn btn-light text-dark me-2"> Login </button> </router-link>
-         <!-- <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Login
-  </button>
-  <div class="dropdown-menu dropdown-menu-right">
-    <button class="dropdown-item" type="button">Mathematics</button>
-         <button to="/login-student" type="button" class="btn btn-light text-dark me-2"> Login </button> 
-    <button class="dropdown-item" type="button">English HL</button>
-    
-
-
-  </div>
-</div> -->
           <button
           type="submit"
           id="logout"

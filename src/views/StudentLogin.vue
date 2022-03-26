@@ -1,6 +1,14 @@
 <template>
 
+
+
+
+
   <form @submit.prevent="loginStudent" class="form new-border">
+    <em><h3 class="text-info"> Are you a tutor ?</h3></em>
+             <router-link to="/login-tutor">  <button type="button" class="btn btn-warning text-center text-dark me-2"> Login here</button> </router-link>
+
+    <br>
     <h2 class="form-heading">Student Login</h2>
     <input
       class="form-input new-border-inset"
@@ -27,9 +35,10 @@
     </div> -->
 
     <p>
-      Not a member?
+      Not a registered student?
       <router-link :to="{ name: 'RegisterStudent' }">Create an account</router-link>
     </p>
+    <br>
   </form>
 </template>
 
