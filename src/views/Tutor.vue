@@ -1,5 +1,5 @@
 <template>
-<div v-if="tutor">
+<div class="cardcontainer" v-if="tutor">
   <div class="card" style="width: 18rem;">
 
   <div class="grid-item ">
@@ -37,5 +37,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>

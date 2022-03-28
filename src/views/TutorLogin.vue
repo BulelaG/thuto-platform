@@ -44,13 +44,15 @@ export default {
     return {
       username: "",
       password: "",
+
     };
 
   },
+
   methods: {
-    logout() {console.log("You are logged out")
-    localStorage.clear();
-    alert("Logged out")},
+    // logout() {console.log("You are logged out")
+    // localStorage.clear();
+    // alert("Logged out")},
     loginTutor() {
             console.log(this.username, this.password);
 

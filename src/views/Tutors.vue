@@ -36,7 +36,7 @@
                <p class="card-text">Grades : {{ tutor.grades }}</p>
                <!-- <p class="text-info card-text">Availability : {{ tutor.availability }}</p> -->
 
-                <p class="card-text">{{ tutor._id }}</p>
+                <!-- <p class="card-text">{{ tutor._id }}</p> -->
               </div>
               <div class="card-footer">
                 
@@ -81,7 +81,7 @@ export default {
   mounted() {
  if (!localStorage.getItem("jwt")) {
             alert("User not logged in");
-            return this.$router.push({ name: "Login" });
+            return this.$router.push({ name: "Home" });
         }
 
     fetch("http://thuto-backend.herokuapp.com/tutors")

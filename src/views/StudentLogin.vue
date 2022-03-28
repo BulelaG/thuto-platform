@@ -1,10 +1,9 @@
-<template>
-
-
-
+  <template>
 
 
   <form @submit.prevent="loginStudent" class="form new-border">
+
+
     <em><h3 class="text-info"> Are you a tutor ?</h3></em>
              <router-link to="/login-tutor">  <button type="button" class="btn btn-warning text-center text-dark me-2"> Login here</button> </router-link>
 
@@ -35,7 +34,7 @@
     </div> -->
 
     <p>
-      Not a registered student?
+      Not a registered tutor?
       <router-link :to="{ name: 'RegisterStudent' }">Create an account</router-link>
     </p>
     <br>
@@ -49,12 +48,15 @@ export default {
     return {
       username: "",
       password: "",
+
     };
+
   },
+
   methods: {
-    logout() {console.log("You are logged out")
-    localStorage.clear();
-    alert("Logged out")},
+    // logout() {console.log("You are logged out")
+    // localStorage.clear();
+    // alert("Logged out")},
     loginStudent() {
             console.log(this.username, this.password);
 
@@ -64,16 +66,22 @@ export default {
           username: this.username,
           password: this.password,
         }),
-        mode: 'cors',
+        // mode: 'no-cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
         .then((response) => response.json())
-        .then((json) => {
-          localStorage.setItem("jwt", json.jwt);
-          alert("Student logged in");
-          this.$router.push({ name: "Tutors" });
+        .then(async(json) => {
+          if(json.accessToken){
+            console.log(json.accessToken)
+            alert("Tutor logged in");
+             this.$router.push({ name: "Tutors" });
+            return await localStorage.setItem("jwt", json.accessToken);
+          }
+          console.log(json);
+          alert("Wrong Credentials")
+           this.$router.push({ name: "Home" });
         })
         .catch((err) => {
           alert(err);

@@ -26,8 +26,10 @@ export default {
 </script>
 
 <style>
-footer{
-  position: absolute;
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 html{
    background:rgb(230, 230, 230);

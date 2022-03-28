@@ -60,6 +60,12 @@
 </div>
               </router-link>
             </li>
+               <li style="padding-right:3px;">
+              <router-link id="mylinks"  to="/contact" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="4"><use /></svg>
+               Contact Us
+              </router-link>
+            </li>
 
 
 
@@ -101,12 +107,14 @@
 
   </div>
 </div> -->
-          <button
-          type="submit"
-          id="logout"
+         
+           <a
+
            @click="logout" 
-           class="btn btn-light text-dark me-2"> <small>Logout</small> 
-           </button> 
+           class="btn btn-light text-dark me-2"
+           to="/" > <small>Logout</small> 
+
+            </a>
 
          <router-link to="/register-student"> <button type="button" class="btn btn-warning"><small>Get a tutor</small> </button> </router-link>
         </div>
@@ -175,6 +183,25 @@
 
 <script>
 export default {
+
+    data() {
+    return {
+      isActive: false,
+      tutor: JSON.parse(localStorage.getItem("tutor"))
+    };
+  },
+  methods: {
+    toggleNav() {
+      this.isActive = !this.isActive;
+    },
+    logout() {
+      localStorage.clear();
+      alert("Goodbye! See you soon")
+      this.$router.push({ name: "Home" });
+      this.toggleNav;
+    },
+  },
+
     
 }
 </script>

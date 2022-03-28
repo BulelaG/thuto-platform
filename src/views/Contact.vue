@@ -1,174 +1,179 @@
 <template>
-  
-<div class="faq_area section_padding_130" id="faq">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-8 col-lg-6">
-                <!-- Section Heading-->
-                <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <h3 class="text-info"><span>Frequently </span> Asked Questions</h3><br>
-                    <div class="line"></div>
-                </div>
+  <div class="text-success contact">
+<br>
+<br>
+
+<br>
+<section class="mb-4">
+
+<!--Section: Contact v.2-->
+<section class="mb-4">
+
+  <div > <h1 class="text-center"  id= purple-myname style="padding-top: 20px; padding-bottom: 20px; padding-right: 20px; font-family: sans-serif -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; border-bottom:solid 2px;"   >Contact me</h1></div>
+
+
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-4"></h2>
+  <!--Section description-->
+  <p  id= purple-myname class="text-center w-responsive  mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I will come back to you within
+      a matter of hours to help you.</p>
+
+  <div class="row " style="border:solid  1px; padding-top:10px ;  padding-bottom:10px; border-radius: 20px;">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action="https://formspree.io/f/mlezrjaw" method="POST">
+
+              <!--Grid row-->
+              <div style=" " class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="name" name="name" class="form-control" required>
+                          <label for="name" class="">Your name</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="email" id="email" name="email" class="form-control" required>
+                          <label for="email" class="">Your email</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div style=" height:110px;" class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input type="text" id="subject" name="subject" class="form-control" required>
+                          <label for="subject" class="">Subject</label>
+                      </div>
+                  </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div style=" height:110px;" class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-12">
+
+                      <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                          <label for="message">Your message</label>
+                      </div>
+
+                  </div>
+              </div>
+              <!--Grid row-->
+
+          </form>
+
+          <div class="text-center text-md-left">
+              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+          </div>
+          <div class="status"></div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div style="border:solid  1px; padding-top:10px ;;  border-radius: 20px;" class="col-md-3 text-center">
+          <ul class="list-unstyled mb-0">
+              <li>  <div>
+                <p> OFFICE ADDRESS </p>
+                  </div>
+                <div>
+            <iframe style="float: bottom; border-radius: 15%; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.2934215261566!2d18.490473614807716!3d-33.9849962806242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc433bfcf832a1%3A0x3b4439b8cc517802!2s314%20Imam%20Haron%20Rd%2C%20Lansdowne%2C%20Cape%20Town%2C%207780!5e0!3m2!1sen!2sza!4v1633096149800!5m2!1sen!2sza" width="200" height="120"  allowfullscreen="" loading="lazy"></iframe>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <!-- FAQ Area-->
-            <div class="col-12 col-sm-10 col-lg-8">
-                <div class="accordion faq-accordian" id="faqAccordion">
-                                    <!-- Q1 -->
-                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="card-header" id="headingOne">
-                            <h6 class="text-warning mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What grades are being tutored?<span class="lni-chevron-up"></span></h6>
-                        </div>
-                        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                            <div class="card-body">
-                                <p class="text-success">Our tutors offer  assistance to student who are in grade 10, 11, and 12.</p>
-                                <p class="text-success">We also assist people that are rewriting to improve their NSC marks</p>
-                            </div>
-                        </div>
-                    </div>
+                  <p>
+                    
+                    
+                    314 Imam Haron Road, Cape Town,
+                    South Africa,
+                    7780
+                    SA</p>
+                    
+              </li>
 
-                                      <!-- Q1 -->
+              <li>
+                  <p>+ 27 672 169 078</p>
+              </li>
 
-                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="card-header" id="headingOne">
-                            <h6 class="text-warning mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What are the requirements to be a tutor?<span class="lni-chevron-up"></span></h6>
-                        </div>
-                        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                            <div class="card-body">
-                                <p>The requirements to become a tutor on our platform are:</p>
-                                <ul>
-                                    <li>Be over 16 years</li>
-                                    <li>Passed your NSC with an average of 80%</li>
-                                    <li>Be fluent in speaking English</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                  <p>bulelagomoshe1@gmai.com</p>
+                    <a style="color: rgb(196, 19, 101);" href=" https://github.com/BulelaG" target="_blank"><i  class="bi bi-instagram" style="font-size: 3em;padding-bottom: 400px;"></i></a>
+                    <a style="color: rgb(59, 61, 179);" href="https://www.linkedin.com/in/bulelag/" target="_blank"><i class="bi bi-linkedin" style="font-size: 3em;padding-bottom: 400px;"></i></a>
+                      
+              </li>
+          </ul>
+      </div>
+      <!--Grid column-->
 
-                                      <!-- Q1 -->
+  </div>
 
-                    <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <div class="card-header" id="headingOne">
-                            <h6 class="text-warning mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Where do you hold classes?<span class="lni-chevron-up"></span></h6>
-                        </div>
-                        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                            <div class="card-body">
-                                <p>We have flexible ways of holding classes :</p>
-                                <ol>
-                                    <li>Local libraries</li>
-                                    <li>Our space/classes</li>
-                                    <li>Your high school</li>
-                                </ol>
-                            </div>
-                                </div>
-                        </div>
-                    </div>
+</section>
+<!--Section: Contact v.2-->
 
-                                      <!-- Q1 -->
-
-                </div>
-                <!-- Support Button-->
-                <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <i class="lni-emoji-sad"></i>
-                    <p class="mb-0 px-2">Can't find your answers?</p>
-                    <a href="#"> Contact us</a>
-                </div>
-            </div>
-        </div>
-    </div>
+</section>
+  </div>
+ 
+                    
 </template>
+
 <script>
+
 export default {
-  
-}
+  }
+
 </script>
 <style scoped>
 
-body{margin-top:20px;}
-.section_padding_130 {
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-.faq_area {
-    position: relative;
-    z-index: 1;
-    background-color: #f5f5ff;
+.contact{
+
+padding-left: 200px;
+padding-right: 200px;
 }
 
-.faq-accordian {
-    position: relative;
-    z-index: 1;
+@media only screen and (max-width: 1380px){
+
+
+.contact{
+
+padding-left: 55px;
+padding-right: 55px;
+
 }
-.faq-accordian .card {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 1.5rem;
 }
-.faq-accordian .card:last-child {
-    margin-bottom: 0;
+@media only screen and (max-width: 780px){
+
+
+.contact{
+
+padding-left: 55px;
+padding-right: 55px;
+
 }
-.faq-accordian .card .card-header {
-    background-color: #ffffff;
-    padding: 0;
-    border-bottom-color: #ebebeb;
-}
-.faq-accordian .card .card-header h6 {
-    cursor: pointer;
-    padding: 1.75rem 2rem;
-    color: #3f43fd;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-.faq-accordian .card .card-header h6 span {
-    font-size: 1.5rem;
-}
-.faq-accordian .card .card-header h6.collapsed {
-    color: #070a57;
-}
-.faq-accordian .card .card-header h6.collapsed span {
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-}
-.faq-accordian .card .card-body {
-    padding: 1.75rem 2rem;
-}
-.faq-accordian .card .card-body p:last-child {
-    margin-bottom: 0;
 }
 
-@media only screen and (max-width: 575px) {
-    .support-button p {
-        font-size: 14px;
-    }
+@media only screen and (max-width: 480px){
+
+  
+
+.contact{
+
+padding-left: 35px;
+padding-right: 35px;
+
 }
 
-.support-button i {
-    color: #3f43fd;
-    font-size: 1.25rem;
-}
-@media only screen and (max-width: 575px) {
-    .support-button i {
-        font-size: 1rem;
-    }
 }
 
-.support-button a {
-    text-transform: capitalize;
-    color: #2ecc71;
-}
-@media only screen and (max-width: 575px) {
-    .support-button a {
-        font-size: 13px;
-    }
-}
 
 </style>
