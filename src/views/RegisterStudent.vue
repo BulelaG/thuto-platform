@@ -103,7 +103,7 @@ export default {
   methods: {
     register() {
       console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grade, this.location);
-      fetch("http://thuto-backend.herokuapp.com/auth2/register-student", {
+      fetch("https://thuto-backend.herokuapp.com/auth2/register-student", {
         method: "POST",
         body: JSON.stringify({
           username: this.username,
@@ -116,7 +116,7 @@ export default {
           contact: this.contact,
           password: this.password
         }),
-        mode: 'cors',
+        // mode: 'cors',
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
