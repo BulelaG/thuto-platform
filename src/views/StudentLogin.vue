@@ -60,7 +60,7 @@ export default {
     loginStudent() {
             console.log(this.username, this.password);
 
-      fetch("http://thuto-backend.herokuapp.com/auth2/login-student", {
+      fetch("https://thuto-backend.herokuapp.com/auth2/login-student", {
         method: "POST",
         body: JSON.stringify({
           username: this.username,

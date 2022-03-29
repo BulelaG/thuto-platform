@@ -56,7 +56,7 @@ export default {
     loginTutor() {
             console.log(this.username, this.password);
 
-      fetch("http://thuto-backend.herokuapp.com/auth/login-tutor", {
+      fetch("https://thuto-backend.herokuapp.com/auth/login-tutor", {
         method: "POST",
         body: JSON.stringify({
           username: this.username,
