@@ -84,7 +84,7 @@ export default {
             return this.$router.push({ name: "Home" });
         }
 
-    fetch("http://thuto-backend.herokuapp.com/tutors")
+    fetch("https://thuto-backend.herokuapp.com/tutors")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

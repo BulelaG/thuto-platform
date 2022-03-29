@@ -27,7 +27,7 @@ export default {
         }
     },
   mounted(){
-        fetch('http://thuto-backend.herokuapp.com/tutors/find/'+ this.id)
+        fetch('https://thuto-backend.herokuapp.com/tutors/find/'+ this.id)
         .then(res => res.json())
         .then(data => this.tutor = data)
         .catch(err=> console.log(err.message))

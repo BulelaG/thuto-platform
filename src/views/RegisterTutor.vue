@@ -158,7 +158,7 @@ export default {
         }]
         console.table(dta)
       // console.log(this.fullname, this.username, this.email, this.contact, this.img, this.subject, this.password, this.grades, this.location, this.document);
-      fetch("http://thuto-backend.herokuapp.com/auth/register-tutor", {
+      fetch("https://thuto-backend.herokuapp.com/auth/register-tutor", {
         method: "POST",
         body: JSON.stringify({
           username: this.username,
