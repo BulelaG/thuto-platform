@@ -60,112 +60,18 @@
 
 <script >
 export default {
-
-// GETT tutor CODE HERE !!!!!!!!!!!!!!!!!!!!!!!
-
-
-   data() {
-    return {
-      tutors: [
-        {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Khayelitsha"
-
-      },
-       {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "Cole Davison",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Mitchells Plain"
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "Sean Denver",
-        grades:"10-12",
-        subject: "Physical Sciences",
-        location: "Cape Town CBD"
-
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "Peter Mallone",
-        grades:"10-12",
-        subject: "Life Sciences",
-        location: "Delft"
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "Donald Jefferson ",
-        grades:"10-12",
-        subject: "Life Sciences",
-        location: "Manenberg"
-
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "Khulani Hlabathi",
-        grades:"10-12",
-        subject: "Geography",
-        location: "Lansdowne"
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "History",
-        location: "Stellenbosch"
-
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Ocean View"
-
-      }, {
-        img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-        name: "John Don",
-        grades:"10-12",
-        subject: "Maths",
-        location: "Wynberg"
-
-      },
-      
-      // {
-      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-      //   name: "John Don",
-      //   grades:"10-12",
-      //   subject: "Maths",
-      //   location: "Claremont"
-
-      // }, 
-      
-      // {
-      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-      //   name: "John Don",
-      //   grades:"10-12",
-      //   subject: "Maths",
-      //   location: "Belville"
-
-      // },
-      
-      // {
-      //   img: "https://i.postimg.cc/2SSFM2nG/avatar.png",
-      //   name: "John Don",
-      //   grades:"10-12",
-      //   subject: "English",
-      //   location: "Hout Bay"
-
-      // },
-     
-       
-      ],
-    };
-  }
+    props: ["id"],
+    data() {
+        return {
+            tutor: null
+        }
+    },
+  mounted(){
+        fetch('http://thuto-backend.herokuapp.com/tutors/find/'+ this.id)
+        .then(res => res.json())
+        .then(data => this.tutor = data)
+        .catch(err=> console.log(err.message))
+    }
 
 
 
